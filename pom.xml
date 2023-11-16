@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.macys.msc.mawm</groupId>
+    <artifactId>mawm-parent</artifactId>
+    <version>2.0.1</version>
+    <relativePath/>
+  </parent>
+      
+  <artifactId>gcp-pubsub-test</artifactId>
+  <version>1.0.0</version>
+  <name>gcp-pubsub-test</name>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>publisher</module>
+    <module>subscriber</module>
+  </modules>
+
+  <properties>
+      <mawmcommon.version>2.0.92</mawmcommon.version>
+      <spring-cloud-gcp.version>4.8.2</spring-cloud-gcp.version>
+      <spring-cloud.version>2022.0.4</spring-cloud.version>
+      <spring-boot.version>3.1.5</spring-boot.version>
+      <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+      <org.lombok.version>1.18.30</org.lombok.version>
+      <messagingpubsub.version>5.0.1</messagingpubsub.version>
+      <sonar.exclusions>
+      </sonar.exclusions>
+  </properties>
+
+  <dependencyManagement>
+      <dependencies>
+          <dependency>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-dependencies</artifactId>
+              <version>${spring-boot.version}</version>
+              <type>pom</type>
+              <scope>import</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-dependencies</artifactId>
+              <version>${spring-cloud.version}</version>
+              <type>pom</type>
+              <scope>import</scope>
+          </dependency>
+          <dependency>
+              <groupId>com.google.cloud</groupId>
+              <artifactId>spring-cloud-gcp-dependencies</artifactId>
+              <version>${spring-cloud-gcp.version}</version>
+              <type>pom</type>
+              <scope>import</scope>
+          </dependency>
+      </dependencies>
+  </dependencyManagement>
+
+  <build>
+      <resources>
+          <resource>
+              <directory>src/main/resources</directory>
+              <filtering>true</filtering>
+          </resource>
+      </resources>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-resources-plugin</artifactId>
+              <version>${maven.plugin.version}</version>
+              <configuration>
+                  <delimiters>
+                      <delimiter>@</delimiter>
+                  </delimiters>
+                  <useDefaultDelimiters>false</useDefaultDelimiters>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+
+</project>

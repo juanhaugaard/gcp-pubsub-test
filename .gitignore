@@ -1,0 +1,70 @@
+# this .gitignore file specifies intentionally untracked files that Git should ignore.
+#- the big idea is what we should keep in Git and what we shouldnt keep in Git repos
+# more info on gitignore
+# - docs - https://git-scm.com/docs/gitignore
+# - sample gitignore files for different environments - https://github.com/github/gitignore
+
+#---------------------------------
+# global blocks
+#
+# it is pointless to remove these because these will cause commits, pushes & merges to fail
+*.zip
+*.tar
+*.rar
+*.gz
+*.jar
+*.war
+*.ear
+*.iso
+*.exe
+*.log
+*.dll
+*.class
+*.com
+*.tmp
+*.bak
+Thumbs.db
+desktop.ini
+*.doc
+*.docx
+# *.xls
+# *.xlsx
+# *.xlsb
+*.pptx
+*.iml
+
+#--------------------------------------
+# below this line, every exclusion is optional, not blocked at the origin servers
+#--------------------------------------
+# Compiled source #
+*.ejb
+#*.class
+#.classpath
+#.settings/
+target/
+*target/
+target/failsafe-reports/*.xml
+dist/
+
+#--------------------------------------
+# Logs and databases #
+#*.csv
+#*.db
+.project
+.settings/*
+config/.classpath
+config/.project
+config/.settings/*
+service/.classpath
+service/.project
+service/.settings/*
+service/*.iml
+service/.factorypath
+*.classpath
+*.project
+**/*.iml
+.idea
+functional-test/allure-results
+
+# vscode related
+.vscode
