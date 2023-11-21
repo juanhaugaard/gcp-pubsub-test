@@ -20,8 +20,8 @@
         <!-- macys dependencies -->
         <dependency>
             <groupId>com.macys.msc.mawm</groupId>
-            <artifactId>messagingpubsub</artifactId>
-            <version>${messagingpubsub.version}</version>
+            <artifactId>gcppubsubutil</artifactId>
+            <version>${gcppubsubutil.version}</version>
         </dependency>
         <dependency>
             <groupId>com.macys.cs.product.gql.client</groupId>
