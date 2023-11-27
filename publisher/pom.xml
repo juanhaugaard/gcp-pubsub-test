@@ -40,11 +40,6 @@
             <version>${org.lombok.version}</version>
         </dependency>
         <!-- Observability dependencies -->
-        <dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-registry-prometheus</artifactId>
-            <scope>runtime</scope>
-        </dependency>
         <!-- Testing dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
