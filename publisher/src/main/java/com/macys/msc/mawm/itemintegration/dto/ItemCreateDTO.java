@@ -12,16 +12,17 @@ public class ItemCreateDTO {
     String color;
     String description;
     String hazardousMaterialId;
-    Integer hazmat;
+    Integer hazmat = 0;
     String merchandizingDepartmentId;
     Double monetaryValue;
-    Double monetaryValueCurrencyCode;
     String primaryBarCode;
     String sizeCode;
     String style;
     Double unitPrice;
     String itemId;
     String imageUrl;
+    String monetaryValueCurrencyCode = "Dollar";
+    String monetaryValueSizeUomId = "Unit";
     ExtendedDTO extended;
 }
 
