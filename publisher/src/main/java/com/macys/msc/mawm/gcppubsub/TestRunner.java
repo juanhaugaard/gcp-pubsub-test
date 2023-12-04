@@ -90,7 +90,9 @@ public class TestRunner implements CommandLineRunner {
     private Map<String, String> makeAttributes() {
         Date date = new Date();
         Timestamp timestamp = Timestamp.of(date);
-        return Map.of("timestamp", timestamp.toString());
+        return Map.of("timestamp", timestamp.toString(),
+                "Organization","MacysDEV",
+                "User", "macysdev-adminuser");
     }
 
     private List<Upc> makePagResponse() throws JsonProcessingException {
